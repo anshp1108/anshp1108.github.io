@@ -12,7 +12,8 @@ const projects = [
       "Real-time appointment scheduling system",
       "Integrated billing and payment processing",
       "Interactive patient & doctor dashboards"
-    ]
+    ],
+    githubUrl: "https://github.com/anshp1108/hospital-management"
   },
   {
     title: "Movie Reviewing Platform",
@@ -23,7 +24,8 @@ const projects = [
       "AWS deployment (EC2, S3, CloudFront)",
       "RESTful API architecture",
       "Scalable database design"
-    ]
+    ],
+    githubUrl: "https://github.com/anshp1108/moviemate"
   },
   {
     title: "Code Review Assistant",
@@ -34,7 +36,8 @@ const projects = [
       "AI-powered optimization suggestions",
       "Real-time syntax error detection",
       "User-friendly Streamlit UI"
-    ]
+    ],
+    githubUrl: "https://github.com/anshp1108/code_review_assistant"
   }
 ];
 
@@ -87,7 +90,12 @@ const Projects = () => {
               </div>
 
               <div className="flex gap-2 mt-4">
-                <Button variant="outline" size="sm" className="flex-1">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="flex-1"
+                  onClick={() => window.open(project.githubUrl, '_blank')}
+                >
                   <Github className="mr-2 h-4 w-4" />
                   Code
                 </Button>
